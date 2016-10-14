@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>The Life and Times of the Thunderbolt Kid</title>
+		<!-- STEP 2a: Use Google Web Fonts API to attach the "Lobster" font -->
+		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<style>
+			/* STEP 3a: Use the font face kit at Font Squirrel to generate @font-face for Rochester */
+			@font-face {
+			    font-family: 'honey_scriptlight';
+			    src: url('fonts/honeyscript/honeyscript-light-webfont.eot');
+			    src: url('fonts/honeyscript/honeyscript-light-webfont.eot?#iefix') format('embedded-opentype'),
+			         url('fonts/honeyscript/honeyscript-light-webfont.woff2') format('woff2'),
+			         url('fonts/honeyscript/honeyscript-light-webfont.woff') format('woff'),
+			         url('fonts/honeyscript/honeyscript-light-webfont.svg#honey_scriptlight') format('svg');
+			    font-weight: normal;
+			    font-style: normal;
+
+			}
+
+			@font-face {
+			    font-family: 'komika';
+			    src: url('fonts/komika/KomikaTitle-Kaps-webfont.eot');
+			    src: url('fonts/komika/KomikaTitle-Kaps-webfont.eot?#iefix') format('embedded-opentype'),
+			         url('fonts/komika/KomikaTitle-Kaps-webfont.woff') format('woff'),
+			         url('fonts/komika/KomikaTitle-Kaps-webfont.ttf') format('truetype'),
+			         url('fonts/komika/KomikaTitle-Kaps-webfont.svg#komika_title_-_kapsregular') format('svg');
+			    font-weight: normal;
+			    font-style: normal;
+
+			}
+			/* STEP 4a: Use the font face kit at Font Squirrel to generate @font-face for "KomikaTitleRegular" - a better fit than "Lobster" */
+
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			html	{
+				height: 100%;
+				background: #ddd;
+			}
+			body {
+				/* STEP 1: Set base font settings to 120% font-size, 1.4 line-height, Futura */
+				font: 120%/1.4 Futura, Helvetica, Arial, sans-serif;
+				color: #111;
+				width: 480px;
+				margin: 0 auto;
+				min-height: 100%;
+				background: url('images/sky.jpg');
+				transform: rotate(-5deg);
+				box-shadow: 10px 10px 50px #666;
+				position: relative;
+				min-height: 680px;
+			}
+			header {
+				text-align: center;
+			}
+			header p:first-child {
+				padding-top: 15px;
+				margin-bottom: -10px;
+			}
+			header p:first-child, header address {
+				background-color: rgb(212, 0, 31);
+			}
+			header address {
+				/* STEP 2b: Set "Lobster" as the first in the font stack for the author's name */
+				font-family: 'komika', Impact, Arial, sans-serif;
+				/* STEP 4d: Replace "Lobster" above with KomikaTitleRegular as the first font in the stack */
+				font-size: 4em;
+				font-weight: normal;
+				font-style: normal;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				color: #eee;
+				-webkit-text-shadow: 6px 4px 1px #000;
+				text-shadow: 6px 4px 1px #000;
+				padding-bottom: 15px;
+			}
+			header p {
+				text-transform: uppercase;
+				letter-spacing: 0.2em;
+			}
+			header p:nth-of-type(2) {
+				background-color: #eee;
+				color: rgb(212, 0, 31);
+				padding: 10px;
+			}
+			header p:nth-of-type(2) em {
+				color: #111;
+			}
+			header h1 {
+				/* STEP 3b: Set HoneyScriptLight as the first font in the stack for header h1 */
+				font-family: 'honey_scriptlight', Arial, sans-serif;
+				font-size: 3em;
+				font-weight: normal;
+				line-height: 0.9;
+				margin-top: 25px;
+			}
+			header h1 strong {
+				display: block;
+				/* STEP 4b: Set KomikaTitleRegular as the first font in the stack */
+				font-family: 'komika', Impact, Arial, sans-serif;
+				font-size: inherit;
+				letter-spacing: 0.1em;
+				font-weight: normal;
+				text-transform: uppercase;
+				/* Step 5b: Kerning! */
+				-letter-kern: -letter-pairs(
+					'Th': -2px,
+					'lt': -5px);
+			}
+			header h1 em{
+				/* STEP 4c: Set KomikaTitleRegular as the first font in the stack */
+				font-family:'komika', Impact, Arial, sans-serif;
+				font-style: normal;
+				color: rgb(212, 0, 31);
+				font-size: 0.4em;
+				letter-spacing: 0.3em;
+				display: block;
+				text-align: right;
+				margin: 20px;
+			}
+			img[alt="The Thunderbolt Kid"] {
+				position: absolute;
+				right: 25px;
+				bottom: 0;
+
+			}
+			blockquote p {
+				font-size: 0.6em;
+				font-weight: normal;
+				width: 27%;
+				margin-left: 15px;
+				line-height: 2;
+				text-align: center;
+			}
+			blockquote p cite {
+				color: #fff;
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+				<p>The <em>New York Times Bestseller</em></p>
+				<address>Bill Bryson</address>
+				<p>Author of <em>A Walk In The Woods</em></p>
+				<h1>The Life and Times of the <strong>Thunderbolt Kid</strong> <em>A Memoir</em></h1>
+		</header>
+		<blockquote>
+			<p><q>[A] laugh-out-loud pilgrimage&hellip;full of insights, wit, and wicked adolescent fantasies.</q> <cite>&mdash;Tom Brokaw</cite></p>
+		</blockquote>
+		<figure>
+			<img src="images/kid_gun.png" alt="The Thunderbolt Kid">
+		</figure>
+		<footer>
+		</footer>
+		<!-- STEP 5a: Attach jQuery and kerning.js to enable CSS kerning -->
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/kerning.js"></script>
+	</body>
+</html>
